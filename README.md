@@ -32,24 +32,25 @@ In the "BEFORE" metrics scenario, all resources were initially deployed and made
 In the "AFTER" metrics context, Network Security Groups were strengthened by blocking ALL traffic except for my admin workstation, and additional protection measures were implemented for other resources through their built-in firewalls and the use of Private Endpoints.
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows]![image](https://github.com/davidjenkins85/Cloud-SOC/assets/150871072/96229d79-108d-496b-9843-fb1951d4d415)
+NSG Allowed Inbound Malicious Flows![image](https://github.com/davidjenkins85/Cloud-SOC/assets/150871072/96229d79-108d-496b-9843-fb1951d4d415)
 <br>
-![Linux Syslog Auth Failures]<br>
-![Windows RDP/SMB Auth Failures]<br>
+Linux Syslog Auth Failures![image](https://github.com/davidjenkins85/Cloud-SOC/assets/150871072/e9141db0-0850-419c-b6eb-9a309a11d6cf)
+<br>
+Windows RDP/SMB Auth Failures![image](https://github.com/davidjenkins85/Cloud-SOC/assets/150871072/044505e4-4125-414b-be24-7a5d2c17c32d)<br>
 
 ## Metrics Before Hardening / Security Controls
 
 The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
+Start Time 2023-11-19 20:38
+Stop Time 2023-11-20 20:38
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+| SecurityEvent            | 46258
+| Syslog                   | 79
+| SecurityAlert            | 13
+| SecurityIncident         | 108
+| AzureNetworkAnalytics_CL | 1939
 
 ## Attack Maps Before Hardening / Security Controls
 
@@ -58,19 +59,19 @@ Stop Time 2023-03-16 17:04:29
 ## Metrics After Hardening / Security Controls
 
 The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
+Start Time 2023-11-28 17:30
+Stop Time	2023-03-19 17:30
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778
-| Syslog                   | 25
+| SecurityEvent            | 10382
+| Syslog                   | 0
 | SecurityAlert            | 0
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
 
 ## Conclusion
 
-In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was employed to trigger alerts and create incidents based on the ingested logs. Additionally, metrics were measured in the insecure environment before security controls were applied, and then again after implementing security measures. It is noteworthy that the number of security events and incidents were drastically reduced after the security controls were applied, demonstrating their effectiveness.
+In this project, a compact honeynet was established in Microsoft Azure, and log sources were incorporated into a Log Analytics workspace. Microsoft Sentinel was utilized to initiate alerts and generate incidents based on the ingested logs. Furthermore, metrics were assessed in the insecure environment both before the implementation of security controls and afterward. Notably, the number of security events and incidents exhibited a significant decrease post the application of security measures, underscoring their efficacy.
 
-It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
+It's important to highlight that if the network's resources were extensively utilized by regular users, there might have been a likelihood of generating more security events and alerts within the 24-hour period following the implementation of security controls.
