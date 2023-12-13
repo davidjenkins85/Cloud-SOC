@@ -42,7 +42,7 @@ Windows RDP/SMB Auth Failures![image](https://github.com/davidjenkins85/Cloud-SO
 
 ## Metrics Before Hardening / Security Controls
 
-The following table shows the metrics we measured in our insecure environment for 24 hours:
+The following table shows the metrics I measured in the insecure environment for 24 hours:
 Start Time 2023-11-19 20:38
 Stop Time 2023-11-20 20:38
 
@@ -60,7 +60,7 @@ Stop Time 2023-11-20 20:38
 
 ## Metrics After Hardening / Security Controls
 
-The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
+The following table shows the metrics I measured in the environment for another 24 hours, but after I applied security controls:
 Start Time 2023-11-28 17:30
 Stop Time	2023-03-19 17:30
 
